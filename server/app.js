@@ -6,7 +6,7 @@ import taskRoutes from "./routes/tasks.routes.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: "https://deploy-merm.vercel.app" }));
 app.use(express.json());
 
 app.use(indexRoutes);
