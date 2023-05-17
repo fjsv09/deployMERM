@@ -6,3 +6,7 @@ CREATE TABLE tasks (
     done BOOLEAN NOT NULL default 0,
     createAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+INSERT INTO tasks VALUES 
+    ("1", "UNO", 0),
+    ("2", "DOS", 0)
