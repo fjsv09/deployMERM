@@ -14,3 +14,11 @@ export const pool = createPool({
   password: DB_PASSWORD,
   database: DB_DATABASE,
 });
+
+pool.getConnection((error) => {
+  if (error) {
+    console.error("Error al conectar a la base de datos:", err);
+    return;
+  }
+  console.log("Conexión exitosa a la base de datos");
+});
