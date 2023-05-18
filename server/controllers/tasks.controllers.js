@@ -4,6 +4,11 @@ export const getTasks = async (req, res) => {
   const [result] = await pool.query(
     "SELECT * FROM tasks ORDER BY createAt DESC"
   );
+
+  if (result.length === 0) {
+    return res.status(404).json({ message: "Tasks not found" });
+  }
+
   res.json(result);
 };
 
